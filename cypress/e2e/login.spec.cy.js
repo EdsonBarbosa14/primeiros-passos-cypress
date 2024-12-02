@@ -1,9 +1,8 @@
 import userData from '../fixtures/user-data.json'
 
 describe('Orange HRM Tests', () => {
-
   const selectorsList = {
-    urlLogin: "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+    urlLogin: "/auth/login",
     usernameField: "[name='username']", 
     passwordField: "[name='password']",
     loginButton: "[type='submit']",
