@@ -36,7 +36,8 @@ describe('Orange HRM Tests', () => {
     cy.get('.--close').click()
     cy.get(dataMyInfo.maritalStatsComboBox).click()
     cy.get(dataMyInfo.maritalStats).click()
-    cy.get(dataMyInfo.saveInfoButton).click()
+    cy.get(dataMyInfo.saveInfoButton).click({ force: true })
+    cy.get('body').should('contain', 'Successfully Updated')
     cy.get('.oxd-toast-close')
   })
      
