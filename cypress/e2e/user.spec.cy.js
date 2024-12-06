@@ -15,6 +15,8 @@ describe('Orange HRM Tests', () => {
       otherIdField:":nth-child(3) > :nth-child(1) > :nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input",
       driverLicenseNumberField: ":nth-child(2) > :nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-input",
       dateField: ':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-date-wrapper > .oxd-date-input > .oxd-input',
+      maritalStatsComboBox: ':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text',
+      maritalStats: '.oxd-select-dropdown > :nth-child(3)',
       saveInfoButton: ':nth-child(1) > .oxd-form > .oxd-form-actions > .oxd-button',
 
   }
@@ -31,7 +33,9 @@ describe('Orange HRM Tests', () => {
     cy.get(dataMyInfo.otherIdField).clear().type('222')
     cy.get(dataMyInfo.driverLicenseNumberField).clear().type('40303034020202')
     cy.get(dataMyInfo.dateField).clear().type('2025-03-10')
-    cy.get('.orangehrm-edit-employee-content > :nth-child(1)').click()
+    cy.get('.--close').click()
+    cy.get(dataMyInfo.maritalStatsComboBox).click()
+    cy.get(dataMyInfo.maritalStats).click()
     cy.get(dataMyInfo.saveInfoButton).click()
     cy.get('.oxd-toast-close')
   })
