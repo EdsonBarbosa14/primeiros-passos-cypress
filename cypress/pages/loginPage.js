@@ -5,7 +5,6 @@ const selectorsList = {
     usernameField: "[name='username']", 
     passwordField: "[name='password']",
     loginButton: "[type='submit']",
-    sectionTittleTopBar: ".oxd-topbar-header-breadcrumb-module",
     dashboardGrid: ".orangehrm-dashboard-grid",
     wrongCredentialAlert: "[role='alert']",
   }

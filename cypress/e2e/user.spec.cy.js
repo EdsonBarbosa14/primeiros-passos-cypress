@@ -1,10 +1,10 @@
 
-import loginClass from '../helpers/loginPage.js'
+import loginClass from '../pages/loginPage.js'
+
+const stepsLogin = new loginClass()
 
 describe('Orange HRM Tests', () => {
   const urlLogin = "/auth/login"
-  
-  const stepsLogin = new loginClass()
 
   const dataMyInfo = {
       myInfoMenuButton: ":nth-child(6) > .oxd-main-menu-item",
