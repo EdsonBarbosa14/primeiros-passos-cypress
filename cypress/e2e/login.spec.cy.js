@@ -10,7 +10,7 @@ describe('Orange HRM Tests', () => {
     wrongCredentialAlert: "[role='alert']",
   }
 
-  it.only('Login - Sucess', () => {
+  it('Login - Sucess', () => {
     cy.visit(selectorsList.urlLogin)
     cy.get(selectorsList.usernameField).type(userData.userSuccess.username)
     cy.get(selectorsList.passwordField).type(userData.userSuccess.password)
